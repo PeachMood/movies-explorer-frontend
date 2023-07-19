@@ -1,0 +1,33 @@
+.search-form {
+  border-bottom: 1px solid #AAA;
+  padding-bottom: 83px;
+}
+
+.search-form__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 41px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    padding-bottom: 56px;
+  }
+
+  .search-form__form {
+    flex-direction: column;
+    gap: 37px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-form {
+    padding-bottom: 43px;
+  }
+
+  .search-form__form {
+    gap: 45px;
+  }
+}

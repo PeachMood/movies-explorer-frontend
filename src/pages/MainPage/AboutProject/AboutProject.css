@@ -1,0 +1,48 @@
+.about-project {
+  background-color: #FAFAFA;
+}
+
+.about-project__content {
+  padding: 110px 70px;
+}
+
+.about-project__articles {
+  display: flex;
+  gap: 52px;
+  padding: 0;
+  margin: 70px 0 0;
+}
+
+.about-project__timeline {
+  margin-top: 110px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__content {
+    padding: 90px 50px;
+  }
+
+  .about-project__articles {
+    gap: 36px;
+  }
+
+  .about-project__timeline {
+    margin-top: 93px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-project__content {
+    padding: 70px 18px;
+  }
+
+  .about-project__articles {
+    flex-direction: column;
+    gap: 58px;
+    margin-top: 63px;
+  }
+
+  .about-project__timeline {
+    margin-top: 60px;
+  }
+}

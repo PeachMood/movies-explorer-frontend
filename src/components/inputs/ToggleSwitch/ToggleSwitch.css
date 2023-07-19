@@ -1,0 +1,65 @@
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+}
+
+.toggle-switch__container {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  transition: opacity 0.3s linear;
+}
+
+.toggle-switch__container:hover {
+  opacity: 0.8;
+}
+
+.toggle-switch__checkbox {
+  appearance: none;
+  width: 36px;
+  height: 20px;
+  background-color: #EBEBEB;
+  border-radius: 50px;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+.toggle-switch__slider {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #F5F5F5;
+  border-radius: 50px;
+  cursor: pointer;
+  transform: translate(0px);
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+.toggle-switch__checkbox:checked {
+  background-color: #2BE080;
+}
+
+.toggle-switch__checkbox:checked+.toggle-switch__slider {
+  background-color: #FFF;
+  transform: translate(calc(100% + 6px));
+}
+
+.toggle-button:checked {
+  background-color: blue;
+}
+
+@media screen and (max-width: 480px) {
+  .toggle-switch {
+    font-size: 11px;
+    gap: 13px;
+  }
+}

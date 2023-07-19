@@ -1,0 +1,51 @@
+.timeline {
+  display: grid;
+  grid-template-columns: minmax(140px, 20%) 1fr;
+}
+
+.timeline__duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  font-size: 14px;
+  line-height: normal;
+  margin: 0;
+}
+
+.timeline__duration_color_accent {
+  background-color: #3456F3;
+  color: #FFF;
+}
+
+.timeline__duration_color_light {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+.timeline__caption {
+  font-family: Suisse Intl, sans-serif;
+  color: #A0A0A0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  margin: 14px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+  .timeline {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .timeline__duration {
+    height: 35px;
+    font-size: 11px;
+  }
+
+  .timeline__caption {
+    font-size: 11px;
+    line-height: normal;
+    margin-top: 10px;
+  }
+}

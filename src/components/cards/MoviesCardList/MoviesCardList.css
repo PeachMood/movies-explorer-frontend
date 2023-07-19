@@ -1,0 +1,30 @@
+.movies-card-list {
+  padding-top: 80px;
+}
+
+.movies-card-list__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(236px, 1fr));
+  gap: 30px 24px;
+}
+
+.movies-card-list__button {
+  margin-top: 81px;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card-list__list {
+    gap: 37px 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movies-card-list {
+    padding-top: 50px;
+  }
+
+  .movies-card-list__list {
+    row-gap: 16px;
+  }
+}

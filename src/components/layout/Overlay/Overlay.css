@@ -1,0 +1,28 @@
+.overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay_visiable {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay_content_center {
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay_content_right {
+  justify-content: flex-end;
+}

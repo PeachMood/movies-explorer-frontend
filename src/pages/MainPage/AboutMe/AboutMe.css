@@ -1,0 +1,39 @@
+.about-me {
+  background-color: #FAFAFA;
+}
+
+.about-me__content {
+  padding: 110px 70px 125px;
+}
+
+.about-me__student {
+  margin-top: 66px;
+}
+
+.about-me__portfolio {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me__content {
+    padding: 90px 50px 80px;
+  }
+
+  .about-me__portfolio {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-me__content {
+    padding: 70px 14px;
+  }
+
+  .about-me__student {
+    margin-top: 60px;
+  }
+
+  .about-me__portfolio {
+    margin-top: 70px;
+  }
+}

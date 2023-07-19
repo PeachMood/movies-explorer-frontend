@@ -1,0 +1,26 @@
+.profile {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #FFF;
+  min-height: 100vh;
+}
+
+.profile__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 74px);
+  box-sizing: border-box;
+  padding: 74px 70px 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__content {
+    padding: 236px 179px 269px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__content {
+    padding: 70px 30px 40px;
+  }
+}

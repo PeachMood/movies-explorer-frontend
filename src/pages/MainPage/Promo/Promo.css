@@ -1,0 +1,58 @@
+.promo {
+  background-color: #DDDEE3;
+}
+
+.promo__content {
+  min-height: 560px;
+  background-image: url(@assets/images/spiral.svg);
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: calc(min(721px, 100%));
+  padding: 50px 70px 60px;
+}
+
+.promo__title {
+  max-width: 626px;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -1.6px;
+  line-height: 52px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .promo__content {
+    min-height: 844px;
+    background-position: center bottom;
+    padding: 300px 44px 70px;
+  }
+
+  .promo__title {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .promo__title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promo__content {
+    min-height: 630px;
+    padding: 183px 0 40px;
+    background-size: auto 230px;
+  }
+
+  .promo__title {
+    font-size: 31px;
+    line-height: 39px;
+    letter-spacing: -1.24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

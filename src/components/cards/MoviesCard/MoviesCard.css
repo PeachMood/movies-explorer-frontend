@@ -1,0 +1,81 @@
+.movies-card {
+  background-color: #EBEBEB;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.movies-card__text {
+  max-width: calc(100% - 56px);
+  white-space: nowrap;
+}
+
+.movies-card__caption {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF;
+  align-items: center;
+  gap: 26px;
+  padding: 13px 14px;
+}
+
+.movies-card__name {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.movies-card__duration {
+  font-size: 11px;
+  line-height: normal;
+  color: #A0A0A0;
+  margin: 9px 0 0;
+}
+
+.movies-card__button {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s linear;
+}
+
+.movies-card__button:hover {
+  opacity: 0.8;
+}
+
+.movies-card__button_type_unsaved {
+  background-color: #F4F4F4;
+  background-image: url(@assets/images/bookmark.svg);
+  background-size: 10px 13px;
+}
+
+.movies-card__button_type_saved {
+  background-color: #3456F3;
+  background-image: url(@assets/images/bookmarkFilled.svg);
+  background-size: 10px 13px;
+}
+
+.movies-card__button_type_remove {
+  background-color: #F4F4F4;
+  background-image: url(@assets/images/remove.svg);
+  background-size: 8px;
+}
+
+.movies-card__image {
+  max-width: 100%;
+  width: 100%;
+  height: calc(100% - 68px);
+  font-size: 11px;
+  line-height: normal;
+  object-fit: cover;
+}
