@@ -1,0 +1,35 @@
+.link {
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  transition: opacity 0.3s linear;
+  line-height: normal;
+  color: #000;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.link_weight_normal {
+  font-weight: 400;
+}
+
+.link_weight_bold {
+  font-weight: 500;
+}
+
+
+.link_size_medium {
+  font-size: 14px;
+}
+
+.link_size_small {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 480px) {
+  .link_size_small {
+    font-size: 12px;
+  }
+}

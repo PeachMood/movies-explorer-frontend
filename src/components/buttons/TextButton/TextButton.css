@@ -1,0 +1,64 @@
+.text-button {
+  font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  transition: opacity 0.3s linear;
+}
+
+.text-button:hover {
+  opacity: 0.7;
+}
+
+.text-button_color_dark {
+  color: #000;
+}
+
+.text-button_color_accent {
+  color: #3456F3;
+}
+
+.text-button_color_warning {
+  color: #EE3465;
+}
+
+.text-button_size_small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-button_size_medium {
+  font-size: 13px;
+  line-height: normal;
+}
+
+.text-button_size_big {
+  font-size: 14px;
+  line-height: normal;
+}
+
+.text-button_size_huge {
+  font-size: 18px;
+  line-height: normal;
+  border: 2px solid transparent
+}
+
+.text-button_bold {
+  font-weight: 500;
+}
+
+.text-button_underlined {
+  border-bottom-color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .text-button_size_small {
+    font-size: 10px;
+  }
+
+  .text-button_size_medium {
+    font-size: 12px;
+  }
+}

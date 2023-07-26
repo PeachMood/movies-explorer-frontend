@@ -1,0 +1,69 @@
+.button {
+  font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button_size_small {
+  font-size: 12px;
+  line-height: 16px;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+}
+
+.button_size_medium {
+  font-size: 14px;
+  line-height: normal;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+}
+
+.button_size_big {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  height: 36px;
+  border-radius: 6px;
+}
+
+.button_color_default {
+  background-color: #F4F4F4;
+  color: #000;
+}
+
+.button_color_accent {
+  background-color: #3456F3;
+  color: #FFF;
+}
+
+.button_color_accent:disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  cursor: default;
+}
+
+.button_color_accent:disabled:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .button_size_small {
+    font-size: 10px;
+    width: 54px;
+    height: 26px;
+  }
+
+  .button_size_medium {
+    font-size: 12px;
+  }
+}

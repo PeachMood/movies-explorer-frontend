@@ -1,0 +1,42 @@
+.article {
+  list-style: none;
+  font-size: 0;
+}
+
+.article__title {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  line-height: normal;
+  margin: 0 0 26px;
+}
+
+.article__text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .article__title {
+    margin-bottom: 22px;
+  }
+
+  .article__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .article__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    margin-bottom: 16px;
+  }
+
+  .article__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}

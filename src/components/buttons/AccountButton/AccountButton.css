@@ -1,0 +1,30 @@
+.account-button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.account-button:hover {
+  opacity: 0.8;
+}
+
+.account-button::after {
+  content: "";
+  background-image: url(@assets/images/profile.svg);
+  border-radius: 6px;
+  background-color: #F4F4F4;
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}

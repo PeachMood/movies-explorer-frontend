@@ -1,0 +1,38 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', Arial, sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  padding: 70px 30px;
+}
+
+.auth__content {
+  padding: 0;
+  border: none;
+}
+
+.auth__content_type_login {
+  margin: 0 0 120px;
+}
+
+.auth__content_type_register {
+  margin: 0 0 31px;
+}
+
+@media screen and (max-width: 480px) {
+  .auth {
+    padding-top: 56px;
+    padding-bottom: 30px;
+  }
+
+  .auth__content_type_login {
+    margin-bottom: 209px;
+  }
+
+  .auth__content_type_register {
+    margin-bottom: 120px;
+  }
+}

@@ -1,0 +1,29 @@
+.navigation {
+  width: calc((675 / 1140) * 100%);
+}
+
+.navigation__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list_access_public {
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.navigation__list_access_private {
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.navigation__item:last-of-type {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .navigation__list_access_public {
+    gap: 14px;
+  }
+}

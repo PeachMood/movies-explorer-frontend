@@ -1,0 +1,27 @@
+.profile {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #FFF;
+}
+
+.profile__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 74px 70px 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__content {
+    padding-top: 236px;
+    padding-bottom: 269px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__content {
+    padding: 70px 30px 40px;
+  }
+}
