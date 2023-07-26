@@ -13,5 +13,5 @@ export const BurgerButton = ({ className }) => {
     setIsOpened((isOpened) => !isOpened);
   };
 
-  return <button className={classes} onClick={handleToggleClick} />
+  return <button className={classes} onClick={handleToggleClick} type="button" />
 };

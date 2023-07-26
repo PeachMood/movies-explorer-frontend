@@ -23,23 +23,25 @@ export const LoginPage = () => {
   };
 
   return (
-    <Auth>
-      <Form config={config} onSubmit={handleLoginClick} >
-        <fieldset className="auth__content auth__content_type_login">
-          <Input
-            label="E-mail"
-            autoComplete="email"
-            type="email"
-            placeholder="Укажите почту"
-            required />
-          <Input
-            label="Пароль"
-            autoComplete="password"
-            type="password"
-            placeholder="Укажите пароль"
-            required />
-        </fieldset>
-      </Form>
-    </Auth>
+    <main>
+      <Auth>
+        <Form config={config} onSubmit={handleLoginClick} >
+          <fieldset className="auth__content auth__content_type_login">
+            <Input
+              label="E-mail"
+              autoComplete="email"
+              type="email"
+              placeholder="Укажите почту"
+              required />
+            <Input
+              label="Пароль"
+              autoComplete="current-password"
+              type="password"
+              placeholder="Укажите пароль"
+              required />
+          </fieldset>
+        </Form>
+      </Auth>
+    </main>
   );
 };

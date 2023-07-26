@@ -3,10 +3,9 @@ import classNames from 'classnames';
 
 import { TextButton } from '@components/buttons/TextButton/TextButton';
 import { Button } from '@components/buttons/Button/Button';
-import { IconButton } from '@components/buttons/IconButton/IconButton';
+import { AccountButton } from '@components/buttons/AccountButton/AccountButton';
 import { List } from '@components/utils/List/List';
 import { useAuthContext } from '@hooks/useAuthContext';
-import profile from '@assets/images/profile.svg';
 
 import './Navigation.css';
 
@@ -52,17 +51,19 @@ export const Navigation = ({ className }) => {
           <TextButton
             text="Фильмы"
             isBold={isCurrentPathname('/movies')}
+            type="button"
             onClick={handleMoviesClick} />
           <TextButton
             text="Сохранённые фильмы"
             isBold={isCurrentPathname('/saved-movies')}
+            type="button"
             onClick={handleSavedMoviesClick} />
-          <IconButton text="Аккаунт" icon={profile} onClick={handleProfileClick} />
+          <AccountButton onClick={handleProfileClick} />
         </List >
       ) : (
         <List className={listClasses}>
-          <TextButton text="Регистрация" size="small" onClick={handleRegisterClick} />
-          <Button text="Войти" size="small" color="accent" onClick={handleLoginClick} />
+          <TextButton text="Регистрация" size="small" type="button" onClick={handleRegisterClick} />
+          <Button text="Войти" size="small" color="accent" type="button" onClick={handleLoginClick} />
         </List >
       )}
     </nav>

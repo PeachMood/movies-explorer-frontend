@@ -1,13 +1,16 @@
 .header {
+  background-color: transparent;
+}
+
+.header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: transparent;
-  box-sizing: border-box;
-  padding: 18px 70px;
   max-width: 1280px;
+  box-sizing: border-box;
   margin: 0 auto;
+  padding: 18px 70px;
 }
 
 .header__burger-button {
@@ -24,14 +27,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .header__content {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .header {
+  .header__content {
     padding-left: 14px;
     padding-right: 14px;
   }

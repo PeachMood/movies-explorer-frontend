@@ -1,7 +1,18 @@
 .text-field {
+  display: flex;
   max-width: 410px;
-  display: block;
-  position: relative;
+}
+
+.text-field_content_top {
+  padding-bottom: 16px;
+}
+
+.text-field_content_bottom {
+  padding-top: 16px;
+}
+
+.text-field:focus-within {
+  background-color: #F8F8F8;
 }
 
 .text-field+.text-field {
@@ -9,23 +20,12 @@
 }
 
 .text-field__label {
-  position: absolute;
-  left: 0;
   font-size: 11px;
   font-weight: 500;
   line-height: normal;
-  max-width: 60px;
-  width: 100%;
+  width: 60px;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.text-field__label_content_top {
-  bottom: 16px;
-}
-
-.text-field__label_content_bottom {
-  top: 16px;
 }
 
 .text-field__input {
@@ -37,27 +37,12 @@
   outline: none;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 70px;
-  padding-right: 0;
+  background-color: transparent;
+  padding: 0;
 }
 
 .text-field__input:disabled {
-  background-color: transparent;
   color: #000;
-}
-
-.text-field__input:focus {
-  background-color: #F8F8F8;
-}
-
-.text-field__input_content_top {
-  padding-top: 0;
-  padding-bottom: 16px;
-}
-
-.text-field__input_content_bottom {
-  padding-top: 16px;
-  padding-bottom: 0;
 }
 
 .text-field__input::placeholder {

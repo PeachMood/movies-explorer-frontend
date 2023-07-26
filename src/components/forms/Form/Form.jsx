@@ -21,7 +21,7 @@ export const Form = ({ config, className, children, ...props }) => {
       <h1 className="form__title">{config.title}</h1>
       {children}
       <Error className="form__error" />
-      <Button className="form__button" text={config.button} type="submit" color="accent" />
+      <Button className="form__button" text={config.button} color="accent" type="submit" />
       <div className="form__navigation">
         {config.navigation}
         <TextButton className="form__text-button" text={config.textButton} color="accent" type="button" onClick={handleButtonClick} />

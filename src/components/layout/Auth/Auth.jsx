@@ -2,8 +2,8 @@ import './Auth.css';
 
 export const Auth = ({ children }) => {
   return (
-    <div className="auth">
+    <section className="auth">
       {children}
-    </div>
+    </section>
   );
 };

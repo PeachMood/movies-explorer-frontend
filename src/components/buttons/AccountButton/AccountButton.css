@@ -1,4 +1,4 @@
-.icon-button {
+.account-button {
   display: flex;
   align-items: center;
   gap: 13px;
@@ -13,11 +13,13 @@
   transition: opacity 0.3s linear;
 }
 
-.icon-button:hover {
+.account-button:hover {
   opacity: 0.8;
 }
 
-.icon-button__icon {
+.account-button::after {
+  content: "";
+  background-image: url(@assets/images/profile.svg);
   border-radius: 6px;
   background-color: #F4F4F4;
   background-position: center;

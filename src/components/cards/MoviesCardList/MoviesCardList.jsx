@@ -22,11 +22,11 @@ export const MoviesCardList = ({ movies, isSavedMovies }) => {
   }, [windowSize]);
 
   return (
-    <section className="movies-card-list">
+    <section className="movies-card-list" aria-label="список фильмов">
       <List className={{ list: 'movies-card-list__list' }}>
         {movies.slice(0, cardsCount).map(movie => <MoviesCard key={movie.image} movie={movie} isSavedMovies={isSavedMovies} />)}
       </List>
-      <Button size="big" text="Ещё" className="movies-card-list__button" />
+      <Button size="big" text="Ещё" className="movies-card-list__button" type="button" />
     </section>
   );
 };

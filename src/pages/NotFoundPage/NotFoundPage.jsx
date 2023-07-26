@@ -17,8 +17,8 @@ export const NotFoundPage = () => {
       <section className="not-found__content">
         <h1 className="not-found__title">404</h1>
         <p className="not-found__text">Страница не найдена</p>
+        <TextButton className="not-found__button" text="Назад" color="accent" size="big" type="button" onClick={handleBackClick} />
       </section>
-      <TextButton text="Назад" color="accent" size="big" onClick={handleBackClick} />
     </div>
   );
 };

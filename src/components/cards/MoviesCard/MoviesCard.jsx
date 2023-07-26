@@ -15,7 +15,7 @@ export const MoviesCard = ({ movie, isSavedMovies }) => {
     <figure className="movies-card">
       <figcaption className="movies-card__caption">
         <div className="movies-card__text">
-          <p className="movies-card__name">{movie.name}</p>
+          <h2 className="movies-card__name">{movie.name}</h2>
           <p className="movies-card__duration">{getTime(movie.duration)}</p>
         </div>
         <button className={buttonClasses} />

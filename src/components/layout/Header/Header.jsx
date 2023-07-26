@@ -20,11 +20,13 @@ export const Header = () => {
   }, [windowSize]);
 
   return (
-    <header className="header" >
-      <Logo />
-      {(!isLoggedIn || isDesktop) && <Navigation />}
-      {isLoggedIn && !isDesktop && <BurgerButton className="header__burger-button" />}
-      {isLoggedIn && !isDesktop && <Sidebar />}
+    <header className="header">
+      <div className="header__content">
+        <Logo />
+        {(!isLoggedIn || isDesktop) && <Navigation />}
+        {isLoggedIn && !isDesktop && <BurgerButton className="header__burger-button" />}
+        {isLoggedIn && !isDesktop && <Sidebar />}
+      </div>
     </header>
   );
 };

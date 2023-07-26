@@ -2,10 +2,9 @@ import { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import profile from '@assets/images/profile.svg';
 import { Overlay } from '@components/layout/Overlay/Overlay';
 import { TextButton } from '@components/buttons/TextButton/TextButton';
-import { IconButton } from '@components/buttons/IconButton/IconButton';
+import { AccountButton } from '@components/buttons/AccountButton/AccountButton';
 import { List } from '@components/utils/List/List';
 import { SidebarContext } from '@context/SidebarContext';
 
@@ -49,19 +48,22 @@ export const Sidebar = ({ className }) => {
               size="huge"
               isBold={true}
               isUnderlined={isCurrentPathname('/')}
+              type="button"
               onClick={handleMainClick} />
             <TextButton
               text="Фильмы"
               size="huge"
               isBold={true}
               isUnderlined={isCurrentPathname('/movies')}
+              type="button"
               onClick={handleMoviesClick} />
             <TextButton
               text="Сохранённые фильмы"
               size="huge" isBold={true}
               isUnderlined={isCurrentPathname('/saved-movies')}
+              type="button"
               onClick={handleSavedMoviesClick} />
-            <IconButton text="Аккаунт" icon={profile} onClick={handleProfileClick} />
+            <AccountButton onClick={handleProfileClick} />
           </List>
         </nav>
       </aside>
