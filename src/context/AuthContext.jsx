@@ -20,13 +20,13 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (isLoggedIn && !currentUser) {
+    if (isLoggedIn) {
       const api = new UserApi();
       api.getCurrentUser()
         .then(user => setCurrentUser(user))
         .catch(error => alert(error));
     }
-  }, [isLoggedIn, currentUser]);
+  }, [isLoggedIn]);
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, setCurrentUser }}>
