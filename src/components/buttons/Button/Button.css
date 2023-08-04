@@ -11,6 +11,16 @@
   opacity: 0.8;
 }
 
+.button:disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  cursor: default;
+}
+
+.button:disabled:hover {
+  opacity: 1;
+}
+
 .button_size_small {
   font-size: 12px;
   line-height: 16px;
@@ -44,16 +54,6 @@
 .button_color_accent {
   background-color: #3456F3;
   color: #FFF;
-}
-
-.button_color_accent:disabled {
-  background-color: #F8F8F8;
-  color: #C2C2C2;
-  cursor: default;
-}
-
-.button_color_accent:disabled:hover {
-  opacity: 1;
 }
 
 @media screen and (max-width: 480px) {

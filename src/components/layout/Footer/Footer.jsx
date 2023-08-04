@@ -1,6 +1,6 @@
 import { Link } from '@components/navigation/Link/Link';
 import { List } from '@components/utils/List/List';
-import { getCurrentYear } from '@utils/time';
+import { getCurrentYear } from '@utils/utils';
 
 import './Footer.css';
 

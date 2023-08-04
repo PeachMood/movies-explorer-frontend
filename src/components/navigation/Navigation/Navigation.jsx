@@ -24,23 +24,23 @@ export const Navigation = ({ className }) => {
     return location.pathname === pathname;
   };
 
-  const handleMoviesClick = () => {
+  const handleMovies = () => {
     navigate('/movies');
   };
 
-  const handleSavedMoviesClick = () => {
+  const handleSavedMovies = () => {
     navigate('/saved-movies');
   };
 
-  const handleProfileClick = () => {
+  const handleProfile = () => {
     navigate('/profile');
   };
 
-  const handleRegisterClick = () => {
+  const handleRegister = () => {
     navigate('/signup');
   };
 
-  const handleLoginClick = () => {
+  const handleLogin = () => {
     navigate('/signin');
   };
 
@@ -52,18 +52,18 @@ export const Navigation = ({ className }) => {
             text="Фильмы"
             isBold={isCurrentPathname('/movies')}
             type="button"
-            onClick={handleMoviesClick} />
+            onClick={handleMovies} />
           <TextButton
             text="Сохранённые фильмы"
             isBold={isCurrentPathname('/saved-movies')}
             type="button"
-            onClick={handleSavedMoviesClick} />
-          <AccountButton onClick={handleProfileClick} />
+            onClick={handleSavedMovies} />
+          <AccountButton onClick={handleProfile} />
         </List >
       ) : (
         <List className={listClasses}>
-          <TextButton text="Регистрация" size="small" type="button" onClick={handleRegisterClick} />
-          <Button text="Войти" size="small" color="accent" type="button" onClick={handleLoginClick} />
+          <TextButton text="Регистрация" size="small" type="button" onClick={handleRegister} />
+          <Button text="Войти" size="small" color="accent" type="button" onClick={handleLogin} />
         </List >
       )}
     </nav>

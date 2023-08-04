@@ -65,17 +65,51 @@
   background-size: 10px 13px;
 }
 
-.movies-card__button_type_remove {
+.movies-card__button_type_delete {
   background-color: #F4F4F4;
-  background-image: url(@assets/images/remove.svg);
+  background-image: url(@assets/images/delete.svg);
   background-size: 8px;
+}
+
+.movies-card__link {
+  display: block;
+  height: 203px;
 }
 
 .movies-card__image {
   max-width: 100%;
   width: 100%;
-  height: calc(100% - 68px);
+  height: 100%;
   font-size: 11px;
   line-height: normal;
   object-fit: cover;
+  transition: opacity 0.3s linear;
+}
+
+.movies-card__image:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card__link {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .movies-card__link {
+    height: 329px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movies-card__link {
+    height: 234px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .movies-card__link {
+    height: 190px;
+  }
 }

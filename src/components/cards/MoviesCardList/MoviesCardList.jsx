@@ -1,32 +1,37 @@
-import { useEffect, useState } from 'react';
 import { Button } from '@components/buttons/Button/Button';
 import { MoviesCard } from '@components/cards/MoviesCard/MoviesCard';
 import { List } from '@components/utils/List/List';
-import { useWindowSize } from '@hooks/useWindowSize';
-import { desktop, tablet, mobile } from '@utils/constants'
+import { Alert } from '@components/utils/Alert/Alert';
+import { useSavedMoviesContext } from '@hooks/useSavedMoviesContext';
+import { useMovieCards } from '@hooks/useMovieCards';
+import { isEmpty } from '@utils/utils';
 
 import './MoviesCardList.css';
 
-export const MoviesCardList = ({ movies, isSavedMovies }) => {
-  const windowSize = useWindowSize();
-  const [cardsCount, setCardsCount] = useState(desktop.cardsCount);
+export const MoviesCardList = ({ movies, areSavedMovies, onSave, onDelete }) => {
+  const { isSaved } = useSavedMoviesContext();
+  const { cardsCount, loadCards } = useMovieCards({ cards: movies });
+  const isButtonShown = movies.length > cardsCount;
 
-  useEffect(() => {
-    if (windowSize[0] > tablet.width) {
-      setCardsCount(desktop.cardsCount);
-    } else if (windowSize[0] <= mobile.width) {
-      setCardsCount(mobile.cardsCount);
-    } else {
-      setCardsCount(tablet.cardsCount);
-    }
-  }, [windowSize]);
+  const renderMovie = (movie) => {
+    const button = areSavedMovies ? 'delete' : (isSaved(movie) ? 'saved' : 'unsaved');
+    const handleClick = isSaved(movie) ? onDelete : onSave;
+
+    return (
+      <MoviesCard key={movie.movieId} movie={movie} button={button} onClick={handleClick} />
+    );
+  };
 
   return (
-    <section className="movies-card-list" aria-label="список фильмов">
-      <List className={{ list: 'movies-card-list__list' }}>
-        {movies.slice(0, cardsCount).map(movie => <MoviesCard key={movie.image} movie={movie} isSavedMovies={isSavedMovies} />)}
-      </List>
-      <Button size="big" text="Ещё" className="movies-card-list__button" type="button" />
-    </section>
+    isEmpty(movies) ? (
+      <Alert text="Упс... Список пуст" />
+    ) : (
+      <section className="movies-card-list" aria-label="список фильмов">
+        <List className={{ list: 'movies-card-list__list' }}>
+          {(areSavedMovies ? movies : movies.slice(0, cardsCount)).map(movie => renderMovie(movie))}
+        </List>
+        {isButtonShown && <Button className="movies-card-list__button" text="Ещё" size="big" type="button" onClick={() => loadCards()} />}
+      </section>
+    )
   );
 };
