@@ -1,13 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
 
-import { usePopupContext } from '@hooks/usePopupContext';
 import { AuthApi } from '@utils/api/AuthApi';
 import { UserApi } from '@utils/api/UserApi';
 
 export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const { setError } = usePopupContext();
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -26,9 +24,9 @@ export const AuthProvider = ({ children }) => {
       const api = new UserApi();
       api.getCurrentUser()
         .then(user => setCurrentUser(user))
-        .catch(error => setError(error));
+        .catch(error => alert(error));
     }
-  }, [isLoggedIn, currentUser, setError]);
+  }, [isLoggedIn, currentUser]);
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, currentUser, setCurrentUser }}>
