@@ -31,7 +31,7 @@ export const ProfileForm = ({ user, error, isEditing, isLoading, onSubmit, onLog
             name="email" autoComplete="email"
             label="E-mail" placeholder="Укажите email"
             disabled={!isEditing}
-            required type="email"
+            required pattern="[aA-zZ0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
             value={values.email || ''}
             error={errors.email}
             onChange={handleChange} />

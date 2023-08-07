@@ -38,9 +38,8 @@ export const LoginPage = () => {
               name="email"
               label="E-mail"
               autoComplete="email"
-              type="email"
+              required pattern="[aA-zZ0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               placeholder="Укажите почту"
-              required
               value={values?.email || ''}
               error={errors.email}
               onInput={handleChange} />

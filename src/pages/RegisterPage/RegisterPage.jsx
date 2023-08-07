@@ -62,9 +62,8 @@ export const RegisterPage = () => {
               name="email"
               label="E-mail"
               autoComplete="email"
-              type="email"
+              required pattern="[aA-zZ0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               placeholder="Укажите электронную почту"
-              required
               value={values?.email || ''}
               error={errors.email}
               onChange={handleChange} />

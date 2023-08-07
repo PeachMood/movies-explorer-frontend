@@ -19,7 +19,7 @@ export const REGISTER_FORM = {
 export const LOGIN_VALIDATION = {
   email: {
     required: 'Поле E-mail является обязательным.',
-    type: 'Пожалуйста, введите корректный email-адрес.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
   },
   password: {
     required: 'Поле Пароль является обязательным.'
@@ -35,7 +35,7 @@ export const REGISTER_VALIDATION = {
   },
   email: {
     required: 'Поле E-mail является обязательным.',
-    type: 'Пожалуйста, введите корректный email-адрес.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
   },
   password: {
     required: 'Поле Пароль является обязательным.',
@@ -59,7 +59,7 @@ export const PROFILE_VALIDATION = {
   },
   email: {
     required: 'Поле E-mail является обязательным.',
-    type: 'Пожалуйста, введите корректный email-адрес.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
   },
 };
 
