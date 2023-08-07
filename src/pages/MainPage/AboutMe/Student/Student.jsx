@@ -3,14 +3,13 @@ import classNames from 'classnames';
 import photo from '@assets/images/photo.jpg';
 import { Link } from '@components/navigation/Link/Link';
 import { List } from '@components/utils/List/List';
-import { birthday } from '@utils/constants';
-import { getAge, getDeclination } from '@utils/time';
+import { getAge, getDeclination } from '@utils/utils';
+import { BIRTHDAY } from '@utils/constants';
 
 import './Student.css';
 
 export const Student = ({ className }) => {
-  const listClasses = { list: 'student__list' };
-  const age = getAge(birthday);
+  const age = getAge(BIRTHDAY);
   const declination = getDeclination(age);
 
   return (
@@ -26,7 +25,7 @@ export const Student = ({ className }) => {
           знаниями в области объектно-ориентированного программирования, компьютерных сетей, теории
           алгоритмов и операционных систем.
         </p>
-        <List className={listClasses}>
+        <List className={{ list: 'student__list' }}>
           <Link text="Github" weight="bold" href="https://github.com/PeachMood" target="_blank" rel="noreferrer" />
           <Link text="Gitlab" weight="bold" href="https://gitlab.com/black_raven" target="_blank" rel="noreferrer" />
         </List>

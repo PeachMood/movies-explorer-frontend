@@ -1,22 +1,26 @@
 .text-field {
-  display: flex;
   max-width: 410px;
-}
-
-.text-field_content_top {
-  padding-bottom: 16px;
-}
-
-.text-field_content_bottom {
-  padding-top: 16px;
-}
-
-.text-field:focus-within {
-  background-color: #F8F8F8;
+  width: 100%;
 }
 
 .text-field+.text-field {
   border-top: 1px solid #E8E8E8;
+}
+
+.text-field__container {
+  display: flex;
+}
+
+.text-field__container:focus-within {
+  background-color: #F8F8F8;
+}
+
+.text-field__container_content_top {
+  padding-bottom: 16px;
+}
+
+.text-field__container_content_bottom {
+  padding-top: 16px;
 }
 
 .text-field__label {
@@ -51,6 +55,7 @@
 
 .text-field__error {
   display: block;
+  min-height: 14px;
   font-size: 11px;
   line-height: normal;
   text-align: center;

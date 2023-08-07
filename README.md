@@ -22,6 +22,7 @@
 - `context` - код для хранения глобальных данных приложения.
 - `hooks` - кастомные хуки.
 - `pages` - компоненты, представляющие собой страницы сайта.
+- `routes` - компоненты для работы с react-router-dom и отрисовки страниц.
 - `utils` - вспомогательные утилиты для упрощения процесса разработки и улучшения качества кода.
 
 ## Запуск
@@ -32,3 +33,5 @@
 ## Ссылки
 - Критерии: https://code.s3.yandex.net/web-developer/static/new-program/web-diploma-criteria-2.0/index.html#jsx
 - Макет: https://www.figma.com/file/RHGhPVMhjVRTNDCa1LJaiO/Movies-explorer?type=design&node-id=891%3A3857&mode=dev
+- Сайт: https://movies.diploma.nomoreparties.co
+- PR: https://github.com/PeachMood/movies-explorer-frontend/pull/2
