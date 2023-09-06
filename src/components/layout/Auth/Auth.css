@@ -22,6 +22,10 @@
   margin: 0 0 31px;
 }
 
+.auth__input+.auth__input {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 480px) {
   .auth {
     padding-top: 56px;

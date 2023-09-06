@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
@@ -6,12 +5,14 @@ import { Overlay } from '@components/layout/Overlay/Overlay';
 import { TextButton } from '@components/buttons/TextButton/TextButton';
 import { AccountButton } from '@components/buttons/AccountButton/AccountButton';
 import { List } from '@components/utils/List/List';
-import { SidebarContext } from '@context/SidebarContext';
+import { useAuthContext } from '@hooks/useAuthContext';
+import { useSidebarContext } from '@hooks/useSidebarContext';
 
 import './Sidebar.css';
 
 export const Sidebar = ({ className }) => {
-  const { isOpened } = useContext(SidebarContext);
+  const { isLoggedIn } = useAuthContext();
+  const { isOpened } = useSidebarContext();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,21 +23,25 @@ export const Sidebar = ({ className }) => {
     return location.pathname === pathname;
   };
 
-  const handleMainClick = () => {
+  const handleMain = () => {
     navigate('/');
   };
 
-  const handleMoviesClick = () => {
+  const handleMovies = () => {
     navigate('/movies');
   };
 
-  const handleSavedMoviesClick = () => {
+  const handleSavedMovies = () => {
     navigate('/saved-movies');
   };
 
-  const handleProfileClick = () => {
+  const handleProfile = () => {
     navigate('/profile');
   };
+
+  if (!isLoggedIn) {
+    return null;
+  }
 
   return (
     <Overlay className={className} isVisiable={isOpened} content="right">
@@ -49,21 +54,21 @@ export const Sidebar = ({ className }) => {
               isBold={true}
               isUnderlined={isCurrentPathname('/')}
               type="button"
-              onClick={handleMainClick} />
+              onClick={handleMain} />
             <TextButton
               text="Фильмы"
               size="huge"
               isBold={true}
               isUnderlined={isCurrentPathname('/movies')}
               type="button"
-              onClick={handleMoviesClick} />
+              onClick={handleMovies} />
             <TextButton
               text="Сохранённые фильмы"
               size="huge" isBold={true}
               isUnderlined={isCurrentPathname('/saved-movies')}
               type="button"
-              onClick={handleSavedMoviesClick} />
-            <AccountButton onClick={handleProfileClick} />
+              onClick={handleSavedMovies} />
+            <AccountButton onClick={handleProfile} />
           </List>
         </nav>
       </aside>

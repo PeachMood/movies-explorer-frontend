@@ -1,106 +1,91 @@
-import car from '@assets/images/car.png';
-import polaroid from '@assets/images/polaroid.png';
-import guitar from '@assets/images/guitar.png';
-import hall from '@assets/images/hall.png';
-import teenagers from '@assets/images/teenagers.png';
-import cleaning from '@assets/images/cleaning.png';
-import thinkers from '@assets/images/thinkers.png';
-import graffiti from '@assets/images/graffiti.png';
-import marathon from '@assets/images/marathon.png';
-import party from '@assets/images/party.png';
-import smoking from '@assets/images/smoking.png';
-import work from '@assets/images/work.png';
+export const BIRTHDAY = new Date('2002/03/14');
 
-export const birthday = new Date('2002/03/14');
-
-export const desktop = {
-  width: 1280,
-  cardsCount: 12,
+export const LOGIN_FORM = {
+  title: 'Рады видеть!',
+  button: 'Войти',
+  navigation: 'Ещё не зарегистрированы?',
+  textButton: 'Регистрация',
+  link: '/signup',
 };
 
-export const tablet = {
-  width: 768,
-  cardsCount: 8,
+export const REGISTER_FORM = {
+  title: 'Добро пожаловать!',
+  button: 'Зарегистрироваться',
+  navigation: 'Уже зарегистрированы?',
+  textButton: 'Войти',
+  link: '/signin',
 };
 
-export const mobile = {
-  width: 480,
-  cardsCount: 5,
+export const LOGIN_VALIDATION = {
+  email: {
+    required: 'Поле E-mail является обязательным.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
+  },
+  password: {
+    required: 'Поле Пароль является обязательным.'
+  },
 };
 
-export const movies = [
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: car,
-    isSaved: false,
+export const REGISTER_VALIDATION = {
+  name: {
+    required: 'Поле Имя является обязательным.',
+    minLength: 'Имя должно содержать не менее 2 символов.',
+    maxLength: 'Имя должно содержать не более 30 символов.',
+    pattern: 'Имя может содержать только латиницу, кириллицу, пробел или дефис.',
   },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: polaroid,
-    isSaved: false,
+  email: {
+    required: 'Поле E-mail является обязательным.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
   },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: guitar,
-    isSaved: true,
+  password: {
+    required: 'Поле Пароль является обязательным.',
+    minLength: 'Пароль должен содержать не менее 6 символов.',
+    maxLength: 'Пароль должен содержать не более 20 символов.',
   },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: hall,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: teenagers,
-    isSaved: true,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: cleaning,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: thinkers,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: graffiti,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: marathon,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: party,
-    isSaved: true,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: smoking,
-    isSaved: false,
-  },
-  {
-    name: '33 слова о дизайне',
-    duration: 6420,
-    image: work,
-    isSaved: false,
-  },
-];
+};
 
-export const savedMovies = movies.filter(movie => movie.isSaved);
+export const MOVIES_VALIDATION = {
+  query: {
+    required: 'Нужно ввести ключевое слово.',
+  },
+};
+
+export const PROFILE_VALIDATION = {
+  name: {
+    required: 'Поле Имя является обязательным.',
+    minLength: 'Имя должно содержать не менее 2 символов.',
+    maxLength: 'Имя должно содержать не более 30 символов.',
+    pattern: 'Имя может содержать только латиницу, кириллицу, пробел или дефис.',
+  },
+  email: {
+    required: 'Поле E-mail является обязательным.',
+    pattern: 'Пожалуйста, введите корректный email-адрес.',
+  },
+};
+
+export const DESKTOP_WINDOW_SIZE = 1028;
+export const DESKTOP_CARDS_CONFIG = {
+  minCount: 12,
+  moreCount: 3,
+  columns: 3,
+};
+
+export const TABLET_WINDOW_SIZE = 768;
+export const TABLET_CARDS_CONFIG = {
+  minCount: 8,
+  moreCount: 2,
+  columns: 2,
+};
+
+export const MOBILE_WINDOW_SIZE = 649;
+export const MOBILE_CARDS_CONFIG = {
+  minCount: 5,
+  moreCount: 2,
+  columns: 1,
+};
+
+export const DEFAULT_ERROR = 'Во время запроса произошла ошибка. Подождите немного и попробуйте ещё раз.';
+export const PROFILE_SUCCESS = 'Данные пользователя успешно обновлены.';
+
+export const MOVIES_SERVER_URL = 'https://api.nomoreparties.co';
+export const SERVER_URL = process.env.NODE_ENV === 'production' ? 'https://api.movies.diploma.nomoredomains.rocks' : 'http://localhost:3000';

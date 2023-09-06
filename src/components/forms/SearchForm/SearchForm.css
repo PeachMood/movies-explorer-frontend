@@ -1,6 +1,5 @@
 .search-form {
   border-bottom: 1px solid #AAA;
-  padding-bottom: 83px;
 }
 
 .search-form__form {
@@ -10,24 +9,29 @@
   gap: 41px;
 }
 
+.search-form__error {
+  margin-top: 37px;
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 768px) {
-  .search-form {
-    padding-bottom: 56px;
-  }
-
   .search-form__form {
     flex-direction: column;
     gap: 37px;
   }
+
+  .search-form__error {
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .search-form {
-    padding-bottom: 43px;
-  }
-
   .search-form__form {
     gap: 45px;
+  }
+
+  .search-form__error {
+    margin-top: 8px;
   }
 }

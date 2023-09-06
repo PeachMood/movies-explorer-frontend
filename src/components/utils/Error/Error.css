@@ -1,12 +1,30 @@
 .error {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   max-width: 100%;
   width: 100%;
-  min-height: 28px;
-  font-size: 11px;
   font-weight: 400;
-  line-height: normal;
-  vertical-align: text-bottom;
-  text-align: center;
   color: #EE3465;
   margin: 0;
+}
+
+.error_font_medium {
+  min-height: 28px;
+  font-size: 11px;
+  line-height: normal;
+}
+
+.error_font_big {
+  min-height: 36px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 480px) {
+  .merror_font_big {
+    min-height: 28px;
+    font-size: 11px;
+    line-height: normal;
+  }
 }
