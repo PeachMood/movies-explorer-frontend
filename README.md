@@ -1,5 +1,5 @@
 # Movies explorer
-Фронтенд сайта для поиска фильмов
+Сайт для поиска интересных фильмов. Чтобы не потерять понравившийся фильм приложение позволяет добавлять фильмы в избранное, а также сохраняет последние запросы.
 
 ![Иллюстрация к проекту](./src/assets/images/project.png)
 
@@ -25,13 +25,23 @@
 - `routes` - компоненты для работы с react-router-dom и отрисовки страниц.
 - `utils` - вспомогательные утилиты для упрощения процесса разработки и улучшения качества кода.
 
-## Запуск
-После установки всех необходимых пакетов при помощи команды `npm install` приложение можно запустить в нескольких режимах:
+## Начало работы
+#### Требования
+Для работы приложения необходимо установить:
+* [Node.js](https://nodejs.org/ru/blog/release/v18.12.0) 18.12+
+* [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (обычно идет с Node.js)
+
+#### Установка
+1. Клонируйте репозиторий
+   ```
+   git clone https://github.com/PeachMood/movies-explorer-frontend.git
+   ```
+2. Установите недостающие зависимости
+   ```
+   npm install
+   ```
+
+#### Запуск
+После установки зависимостей приложение можно запустить в нескольких режимах:
 1. `npm run start` - разработка
 2. `npm run build` - сборка
-
-## Ссылки
-- Критерии: https://code.s3.yandex.net/web-developer/static/new-program/web-diploma-criteria-2.0/index.html#jsx
-- Макет: https://www.figma.com/file/RHGhPVMhjVRTNDCa1LJaiO/Movies-explorer?type=design&node-id=891%3A3857&mode=dev
-- Сайт: https://movies.diploma.nomoreparties.co
-- PR: https://github.com/PeachMood/movies-explorer-frontend/pull/2
