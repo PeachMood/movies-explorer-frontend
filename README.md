@@ -26,11 +26,11 @@
 - `utils` - вспомогательные утилиты для упрощения процесса разработки и улучшения качества кода.
 
 ## Начало работы
-#### Требования
+### Требования
 Для работы приложения необходимо установить:
 * [Node.js](https://nodejs.org/ru/blog/release/v18.12.0) 18.12+
 * [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (обычно идет с Node.js)
-#### Установка
+### Установка
 1. Клонируйте репозиторий
    ```
    git clone https://github.com/PeachMood/movies-explorer-frontend.git
@@ -39,7 +39,7 @@
    ```
    npm install
    ```
-#### Запуск
+### Запуск
 После установки зависимостей приложение можно запустить в нескольких режимах:
 1. `npm run start` - разработка
 2. `npm run build` - сборка
