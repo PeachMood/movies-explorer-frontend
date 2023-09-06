@@ -30,7 +30,6 @@
 Для работы приложения необходимо установить:
 * [Node.js](https://nodejs.org/ru/blog/release/v18.12.0) 18.12+
 * [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (обычно идет с Node.js)
-
 #### Установка
 1. Клонируйте репозиторий
    ```
@@ -40,7 +39,6 @@
    ```
    npm install
    ```
-
 #### Запуск
 После установки зависимостей приложение можно запустить в нескольких режимах:
 1. `npm run start` - разработка
